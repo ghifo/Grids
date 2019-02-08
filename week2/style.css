@@ -1,0 +1,104 @@
+body {
+  background-image: url(https://c1.staticflickr.com/5/4097/4893035233_62ae1bd2fe.jpg);
+}
+h1 {
+  color: lightgrey;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-align :center;
+  font-family :fantasy;
+  font-weight :bold;
+  font-size :2.5rem;
+  box-shadow: 10px 10px 5px grey;
+}
+section>h2 {
+  color: lightgrey;
+  text-shadow: 1px 1px 2px black, 0 0 5px darkblue;
+  font-family :fantasy;
+  font-size :1.5rem;
+}
+h3 {
+    color: darkblue;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+img {
+  width :50%;
+  margin: 1.5em;
+  border-radius: 5%;
+  box-shadow: 1px 1px 2px black, 0 0 5px darkblue;
+}
+section {
+  overflow: hidden;
+}
+.grid-item { 
+  list-style: none;
+  display: block;
+  background-color: rgb(210, 233, 240);
+  box-sizing :border-box;
+  border:2px dashed grey;
+  border-radius:5px;
+  margin :5px;
+  padding :1%;
+  width: calc(50% - 10px);
+}
+li:hover {
+  font-family: sans-serif;
+  animation-name: read-me;
+  animation-duration: 4s;
+  position: relative;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in
+}
+@keyframes read-me {
+  from {bottom: 0px;}
+  to {bottom: 50px;}
+}
+/*------------Grid with floats--------------*/
+#grid-floats .grid-item {
+  height: 400px;
+  overflow :auto;
+  float :left;
+}
+#grid-floats .grid-item:nth-child(1) {
+  width: calc(100% - 10px);
+}
+@media all and (max-width: 699px) and (min-width: 520px) {
+  #grid-floats .grid-item { 
+    width: calc(100% / 3 - 10px);
+  }
+  #grid-floats .grid-item:nth-child(-n+2) {
+    width: calc(50% - 10px);
+  }
+ }
+ @media all and (min-width: 700px) {
+  #grid-floats .grid-item:nth-child(n+2) {
+    width: calc(100% / 4 - 10px); 
+    }
+   #grid-floats .grid-item:nth-child(1) {
+  width: calc(50% - 10px);
+    }
+ }
+ /*------------Grid with flexbox--------------*/
+ #grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+ #grid-flex .grid-item:nth-child(1) {
+  width: calc(100% - 10px);
+}
+@media all and (max-width: 699px) and (min-width: 520px) {
+  #grid-flex .grid-item { 
+    width: calc(100% / 3 - 10px);
+  }
+  #grid-flex .grid-item:nth-child(-n+2) {
+    width: calc(50% - 10px);
+  }
+ }
+ @media all and (min-width: 700px) {
+  #grid-flex .grid-item:nth-child(n+2) {
+    width: calc(100% / 4 - 10px); 
+    }
+    #grid-flex .grid-item:nth-child(1) {
+  width: calc(50% - 10px);
+    }
+ }
