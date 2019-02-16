@@ -58,16 +58,16 @@ section {
   .grid-item:nth-child(n+3) {
     width: calc(100% / 3 - 10px);
   }
- }
- @media (min-width: 900px) {
+}
+@media (min-width: 900px) {
   .grid-item:nth-child(1) {
- width: calc(50% - 10px);
-   }
-   .grid-item:nth-child(n+2) {
+width: calc(50% - 10px);
+  }
+  .grid-item:nth-child(n+2) {
     width: calc(100% / 4 - 10px); 
-    }
- }
- li:hover {
+  }
+}
+li:hover {
   font-family: sans-serif;
   position: relative;
   box-shadow: 6px 8px 3px 3px #cdcdd0;
